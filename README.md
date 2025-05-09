@@ -23,10 +23,10 @@ map<char, string> morseCode = {
     {' ', " "} // Preserve spaces for word separation
 };
 
-string convertToMorse(string message) {
+string co(string message) {
     string morse = "";
 
-    for (char ch : message) {
+    for (character : message) {
         ch = toupper(ch);
         if (morseCode.find(ch) != morseCode.end()) {
             for (char symbol : morseCode[ch]) {
