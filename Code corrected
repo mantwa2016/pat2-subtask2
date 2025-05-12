@@ -1,0 +1,39 @@
+#include <iostream>      // Syntax fix: Correct header file syntax
+#include <iomanip>       // Syntax fix: Required for setprecision
+
+using namespace std;     // Syntax fix: 'stt' changed to 'std'
+
+const int NUM_EXPERIMENTS = 3;
+const int NUM_READINGS = 3;
+
+int main() {             // Syntax fix: 'float main()' changed to 'int main()'
+
+    for (int i = 1; i <= NUM_EXPERIMENTS; i++) { // Logic fix: outer loop added for NUM_EXPERIMENTS
+        double readingValue, total = 0, average; // Logic fix: total initialized to 0 before each experiment
+
+        for (int j = 1; j <= NUM_READINGS; j++) { // Syntax fix: missing semicolon in loop condition fixed
+            cout << "Enter reading " << j << " value: ";
+            cin >> readingValue;                // Syntax fix: 'reading' changed to 'readingValue'
+            total += readingValue;              // Syntax fix: '-' changed to '+=' for correct accumulation
+        }
+
+        average = total / NUM_READINGS;         // Logic fix: Removed incorrect '+ total' from original line
+
+        // Logic fix: Proper evaluation and logical operators
+        if (average > 300) {
+            cout << "Experiment " << i << " average: "
+                 << fixed << setprecision(2)
+                 << average << " is Above acceptable range\n";
+        } else if (average >= 100 && average <= 300) {
+            cout << "Experiment " << i << " average: "
+                 << fixed << setprecision(2) << average
+                 << " is Within acceptable range\n";
+        } else {
+            cout << "Experiment " << i << " average: "
+                 << fixed << setprecision(2) << average 
+                 << " is Below acceptable range\n";
+        }
+    }
+
+    return 0; // Syntax fix: Correct placement of return statement inside main()
+}
