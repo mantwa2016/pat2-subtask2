@@ -19,7 +19,7 @@ map<char, string> morseCode = {
     {'0', "-----"}, {'1', ".----"}, {'2', "..---"},
     {'3', "...--"}, {'4', "....-"}, {'5', "....."},
     {'6', "-...."}, {'7', "--..."}, {'8', "---.."},
-    {'9', "----."}
+    {'9', "----."},
     {' ', " "} // Preserve spaces for word separation
 };
 
@@ -40,7 +40,7 @@ string co(string message) {
 }
 
 int main() {
-    string input;
+    string input;,
     cout << "Enter a short message: ";
     getline(cin, input);
 
