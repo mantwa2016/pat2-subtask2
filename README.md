@@ -3,7 +3,7 @@
 #include <map>
 #include <string>
 
-using namespace std;
+using namespace std
 
 // Morse code mapping.
 map<char, string> morseCode = {
