@@ -5,7 +5,7 @@
 
 using namespace std;
 
-// Morse code mapping
+// Morse code mapping.
 map<char, string> morseCode = {
     {'A', ".-"},    {'B', "-..."},  {'C', "-.-."},
     {'D', "-.."},   {'E', "."},     {'F', "..-."},
