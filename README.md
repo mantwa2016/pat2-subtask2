@@ -40,7 +40,7 @@ string co(string message) {
 }
 
 int main() {
-    string input;,
+    string input;
     cout << "Enter a short message: ";
     getline(cin, input);
 
